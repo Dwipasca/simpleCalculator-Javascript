@@ -15,7 +15,7 @@ function createAndwriteOutput(operator, resultBeforeCalc, calcNumber) {
 function add() {
   const enterNumber = getUserInput();
   const initialResult = currentResult;
-  currentResult = currentResult + enterNumber;
+  currentResult += enterNumber;
   createAndwriteOutput("+", initialResult, enterNumber);
 }
 
@@ -23,7 +23,7 @@ function add() {
 function minus() {
   const enterNumber = getUserInput();
   const initialResult = currentResult;
-  currentResult = currentResult - enterNumber;
+  currentResult -= enterNumber;
   createAndwriteOutput("-", initialResult, enterNumber);
 }
 
@@ -31,7 +31,7 @@ function minus() {
 function multiple() {
   const enterNumber = getUserInput();
   const initialResult = currentResult;
-  currentResult = currentResult * enterNumber;
+  currentResult *= enterNumber;
   createAndwriteOutput("x", initialResult, enterNumber);
 }
 
@@ -39,11 +39,11 @@ function multiple() {
 function divide() {
   const enterNumber = getUserInput();
   const initialResult = currentResult;
-  currentResult = currentResult / enterNumber;
+  currentResult /= enterNumber;
   createAndwriteOutput(":", initialResult, enterNumber);
 }
 
-//when the button click will be call the function
+//when the button calc click will be call the function
 addBtn.addEventListener("click", add);
 minusBtn.addEventListener("click", minus);
 multipleBtn.addEventListener("click", multiple);
